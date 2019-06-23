@@ -3,7 +3,7 @@ object AppConfig {
 
     object Sdk {
         const val targetVersion = 28
-        const val minVersion = 21
+        const val minVersion = 23
     }
 
     object Version {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="IconBottomTextView">
+        <attr name="backgroundColor" format="reference|integer"/>
+        <attr name="text" format="reference|integer"/>
+        <attr name="textColor" format="reference|integer"/>
+        <attr name="topIcon" format="reference|integer"/>
+    </declare-styleable>
+
+</resources>
