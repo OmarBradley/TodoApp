@@ -3,6 +3,7 @@ package omarbradley.com.util.view
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.widget.FrameLayout
 import kotlinx.android.synthetic.main.view_icon_bottom_text.view.*
 import omarbradley.com.util.R

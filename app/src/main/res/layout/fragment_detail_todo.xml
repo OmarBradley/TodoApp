@@ -43,10 +43,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView_taskTitle"
-                    app:layout_constraintVertical_bias="0"/>
+                    app:layout_constraintTop_toTopOf="@+id/textView_taskTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_taskDescription"
+                    app:layout_constraintEnd_toStartOf="@+id/textView_taskTitle"/>
 
             <TextView
                     android:id="@+id/textView_taskTitle"

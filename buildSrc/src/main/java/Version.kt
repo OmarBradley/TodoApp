@@ -1,6 +1,6 @@
 internal object Version {
 
-    const val kotlin = "1.3.31"
+    const val kotlin = "1.3.40"
     const val appCompat = "1.1.0-beta01"
     const val lifecycle = "2.2.0-alpha01"
     const val ktx = "1.2.0-alpha01"
@@ -29,4 +29,11 @@ internal object Version {
     const val paging = "2.1.0"
 
     const val klock = "1.0.0"
+
+    const val room = "2.1.0"
+    const val roomCoroutineAdapter = "2.1.0-alpha04"
+
+    const val result = "2.2.0"
+    const val resultCoroutine = "2.0.0"
+
 }

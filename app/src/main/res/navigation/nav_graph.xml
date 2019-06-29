@@ -42,6 +42,12 @@
             android:id="@+id/detailTodoFragment"
             android:name="omarbradley.com.todoapp.view.DetailTodoFragment"
             android:label="DetailTodoFragment"
-            tools:layout="@layout/fragment_detail_todo"/>
+            tools:layout="@layout/fragment_detail_todo">
+
+        <action
+                android:id="@+id/action_detailTodoFragment_to_createTodoFragment"
+                app:destination="@id/createTodoFragment"/>
+
+    </fragment>
 
 </navigation>

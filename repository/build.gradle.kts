@@ -1,4 +1,5 @@
 import de.mannodermaus.gradle.plugins.junit5.junitPlatform
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id(Plugin.androidLibrary)
@@ -37,27 +38,18 @@ android {
 }
 
 dependencies {
+    implementation(project(":util"))
+    implementation(project(":entity"))
+
     implementation(Dependency.Kotlin.stblib)
-    implementation(Dependency.AndroidX.appcompat)
-    implementation(Dependency.AndroidX.ktx)
-    implementation(Dependency.AndroidX.constraintlayout)
-    implementation(Dependency.AndroidX.recyclerview)
-    implementation(Dependency.Glide.glide)
-    implementation(Dependency.Coroutine.android)
     implementation(Dependency.Coroutine.core)
-    implementation(Dependency.Lifecycle.viewModelKtx)
-    implementation(Dependency.Paging.runtimeKtx)
-    implementation(Dependency.Paging.common)
-    implementation(Dependency.Kclock.jvm)
-    implementation(Dependency.Lifecycle.extensions)
-    implementation(Dependency.Lifecycle.extensions)
+    implementation(Dependency.Room.runtime)
+    implementation(Dependency.Room.coroutines)
+    implementation(Dependency.Result.result)
+    implementation(Dependency.Result.resultCoroutine)
 
-    kapt(Dependency.Lifecycle.compiler)
-    kapt(Dependency.Glide.compiler)
+    kapt(Dependency.Room.compiler)
 
-    testImplementation(Dependency.Spek.dslJvm)
-    testImplementation(Dependency.Spek.runnerJunit5)
-    testImplementation(Dependency.Kotlin.reflect)
-    testImplementation(Dependency.Junit.hamkrest)
     testImplementation(Dependency.KotlinTest.kotlinTest)
+    testImplementation(Dependency.Room.test)
 }

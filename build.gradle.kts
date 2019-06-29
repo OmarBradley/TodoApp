@@ -18,9 +18,8 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven {
-            setUrl("https://dl.bintray.com/soywiz/soywiz")
-        }
+        maven { setUrl("https://dl.bintray.com/soywiz/soywiz") }
+        maven { setUrl("https://dl.bintray.com/kittinunf/maven") }
     }
 }
 

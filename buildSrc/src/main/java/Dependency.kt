@@ -101,5 +101,18 @@ object Dependency {
         const val jvm = "com.soywiz:klock-jvm:${Version.klock}"
     }
 
+    object Room {
+
+        const val runtime = "androidx.room:room-runtime:${Version.room}"
+        const val compiler = "androidx.room:room-compiler:${Version.room}"
+        const val coroutines = "androidx.room:room-coroutines:${Version.roomCoroutineAdapter}"
+        const val test = "androidx.room:room-testing:${Version.room}"
+    }
+
+    object Result {
+
+        const val result = "com.github.kittinunf.result:result:${Version.result}"
+        const val resultCoroutine = "com.github.kittinunf.result:result-coroutines:${Version.resultCoroutine}"
+    }
 
 }
