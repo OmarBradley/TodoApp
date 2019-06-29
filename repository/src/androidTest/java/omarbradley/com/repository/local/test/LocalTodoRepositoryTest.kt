@@ -33,8 +33,6 @@ class LocalTodoRepositoryTest : KoinTest {
         todoAppDatabase.close()
         stopKoin()
     }
-
-
     
 
     @Test
