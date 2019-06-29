@@ -65,6 +65,7 @@ object Dependency {
 
         const val runner = "androidx.test:runner:${Version.testRunner}"
         const val espressoCore = "androidx.test.espresso:espresso-core:${Version.espresso}"
+        const val testExt = "androidx.test.ext:junit:${Version.androidxTestExt}"
     }
 
     object Okhttp3 {
@@ -88,6 +89,7 @@ object Dependency {
         const val test = "org.koin:koin-test:${Version.koin}"
         const val androidxScope = "org.koin:koin-androidx-scope:${Version.koin}"
         const val androidxViewmodel = "org.koin:koin-androidx-viewmodel:${Version.koin}"
+        const val androidxExt = "org.koin:koin-androidx-ext:${Version.koin}"
     }
 
     object Glide {
@@ -105,7 +107,7 @@ object Dependency {
 
         const val runtime = "androidx.room:room-runtime:${Version.room}"
         const val compiler = "androidx.room:room-compiler:${Version.room}"
-        const val coroutines = "androidx.room:room-coroutines:${Version.roomCoroutineAdapter}"
+        const val coroutines = "androidx.room:room-coroutines:${Version.room}"
         const val test = "androidx.room:room-testing:${Version.room}"
     }
 

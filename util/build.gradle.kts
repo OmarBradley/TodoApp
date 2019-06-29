@@ -50,7 +50,7 @@ dependencies {
     implementation(Dependency.Paging.common)
     implementation(Dependency.Kclock.jvm)
     implementation(Dependency.Lifecycle.extensions)
-    implementation(Dependency.Lifecycle.extensions)
+    implementation(Dependency.Room.runtime)
 
     kapt(Dependency.Lifecycle.compiler)
     kapt(Dependency.Glide.compiler)

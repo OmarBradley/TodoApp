@@ -4,9 +4,24 @@ import omarbradley.com.entity.Todo
 
 interface TodoRepository {
 
-    //fun insertTodo(todo: Todo): Result
-    //fun insertTodo(todo : Todo)
+    suspend fun postTodo(todo: Todo)
 
-    fun insertTodo(todo: Todo)
+    suspend fun postTodos(todos: List<Todo>)
+
+    suspend fun getTodos(): List<Todo>
+
+    suspend fun getTodosBy(isCompleted: Boolean): List<Todo>
+
+    suspend fun getTodosCount(): Int
+
+    suspend fun getTodosCountBy(isCompleted: Boolean): Int
+
+    suspend fun putTodo(todo: Todo)
+
+    suspend fun putTodos(todos: List<Todo>)
+
+    suspend fun deleteTodo(todo: Todo)
+
+    suspend fun deleteTodos(todos: List<Todo>)
 
 }

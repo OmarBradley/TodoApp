@@ -11,6 +11,6 @@ object AppConfig {
         const val name = "1.0"
     }
 
-    const val testRunner = "omarbradley.com.todoapp"
+    const val testRunner = "androidx.test.runner.AndroidJUnitRunner"
     const val applicationId = "omarbradley.com.todoapp"
 }

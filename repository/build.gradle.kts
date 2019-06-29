@@ -1,5 +1,4 @@
 import de.mannodermaus.gradle.plugins.junit5.junitPlatform
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id(Plugin.androidLibrary)
@@ -47,9 +46,18 @@ dependencies {
     implementation(Dependency.Room.coroutines)
     implementation(Dependency.Result.result)
     implementation(Dependency.Result.resultCoroutine)
+    implementation(Dependency.Koin.core)
+    implementation(Dependency.Koin.coreExt)
+    implementation(Dependency.Koin.androidxExt)
 
     kapt(Dependency.Room.compiler)
 
-    testImplementation(Dependency.KotlinTest.kotlinTest)
-    testImplementation(Dependency.Room.test)
+    androidTestImplementation(Dependency.AndroidTest.runner)
+    androidTestImplementation(Dependency.AndroidTest.espressoCore)
+    androidTestImplementation(Dependency.AndroidTest.testExt)
+    androidTestImplementation(Dependency.Room.test)
+    androidTestImplementation(Dependency.Koin.test)
+    androidTestImplementation(Dependency.Junit.hamkrest)
+    androidTestImplementation(Dependency.Kotlin.reflect)
+
 }

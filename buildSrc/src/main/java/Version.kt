@@ -4,6 +4,7 @@ internal object Version {
     const val appCompat = "1.1.0-beta01"
     const val lifecycle = "2.2.0-alpha01"
     const val ktx = "1.2.0-alpha01"
+    const val androidxTestExt = "1.1.0"
     const val constraintlayout = "2.0.0-alpha4"
     const val coroutine = "1.2.1"
     const val navigation = "2.1.0-alpha05"
@@ -22,7 +23,7 @@ internal object Version {
     const val retrofit2 = "2.5.0"
     const val coroutineAdapter = "0.9.2"
 
-    const val koin = "2.0.0-GA4"
+    const val koin = "2.0.1"
 
     const val glide = "4.9.0"
 
@@ -30,8 +31,7 @@ internal object Version {
 
     const val klock = "1.0.0"
 
-    const val room = "2.1.0"
-    const val roomCoroutineAdapter = "2.1.0-alpha04"
+    const val room = "2.1.0-alpha04"
 
     const val result = "2.2.0"
     const val resultCoroutine = "2.0.0"

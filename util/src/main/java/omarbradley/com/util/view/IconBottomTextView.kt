@@ -39,8 +39,8 @@ class IconBottomTextView @JvmOverloads constructor(
 
         with(textView_iconText) {
             setText(textRes)
-            setTextColor(resources.getColor(textColorRes))
-            setCompoundDrawables(null, resources.getDrawable(topIconRes), null, null)
+            setTextColor(resources.getColor(textColorRes, null))
+            setCompoundDrawables(null, resources.getDrawable(topIconRes, null), null, null)
         }
 
         typedArray.recycle()

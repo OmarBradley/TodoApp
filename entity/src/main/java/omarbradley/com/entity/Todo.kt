@@ -1,9 +1,9 @@
 package omarbradley.com.entity
 
 data class Todo(
-    val id: Long,
-    val title: String,
-    val description: String,
-    val createTimeMillis: Long,
-    val isCompleted: Boolean
+    var title: String,
+    var description: String,
+    var createTimeMillis: Long,
+    var isCompleted: Boolean,
+    var id: Long = 0
 )
