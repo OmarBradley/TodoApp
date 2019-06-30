@@ -24,4 +24,8 @@ interface TodoRepository {
 
     suspend fun deleteTodos(todos: List<Todo>)
 
+    suspend fun putTodoModelBy(title: String, description: String, id: Long)
+
+    suspend fun putTodoModelBy(isCompleted: Boolean, id: Long)
+
 }

@@ -18,12 +18,10 @@ class LocalTodoRepository(
         todoModelDao.insert(*todos.toTodoModelsArray())
 
     override suspend fun getTodos(): List<Todo> =
-        todoModelDao.selectTodoModels()
-            .toTodos()
+        todoModelDao.selectTodoModels().toTodos()
 
     override suspend fun getTodosBy(isCompleted: Boolean): List<Todo> =
-        todoModelDao.selectTodoModelsBy(isCompleted)
-            .toTodos()
+        todoModelDao.selectTodoModelsBy(isCompleted).toTodos()
 
     override suspend fun getTodosCount(): Int =
         todoModelDao.selectCountTodoModels()
@@ -45,6 +43,14 @@ class LocalTodoRepository(
 
     override suspend fun deleteTodos(todos: List<Todo>) {
         todoModelDao.delete(*todos.toTodoModelsArray())
+    }
+
+    override suspend fun putTodoModelBy(isCompleted: Boolean, id: Long) {
+        todoModelDao.updateTodoModelBy(isCompleted, id)
+    }
+
+    override suspend fun putTodoModelBy(title: String, description: String, id: Long) {
+        todoModelDao.updateTodoModelBy(title, description, id)
     }
 
 }

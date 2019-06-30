@@ -20,4 +20,10 @@ interface TodoModelDao : BaseDao<TodoModel> {
     @Query("SELECT COUNT(*) FROM todo WHERE isCompleted = :isCompleted")
     suspend fun selectCountTodoModelsBy(isCompleted: Boolean): Int
 
+    @Query("UPDATE todo SET title = :title, description = :description WHERE id =:id")
+    suspend fun updateTodoModelBy(title: String, description: String, id: Long)
+
+    @Query("UPDATE todo SET isCompleted = :isCompleted WHERE id =:id")
+    suspend fun updateTodoModelBy(isCompleted: Boolean, id: Long)
+
 }

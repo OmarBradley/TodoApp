@@ -1,10 +1,9 @@
-package omarbradley.com.repository.local.test
+package omarbradley.com.repository
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
 import kotlinx.coroutines.runBlocking
-import omarbradley.com.repository.TodoRepository
 import omarbradley.com.repository.local.db.TodoAppDatabase
 import omarbradley.com.repository.local.dummy.*
 import omarbradley.com.repository.local.module.localTestModule
@@ -17,8 +16,9 @@ import org.koin.core.context.stopKoin
 import org.koin.test.KoinTest
 import org.koin.test.inject
 
+// TODO 테스팅 코드의 가독성을 더욱 더 개선시킬 방안을 찾자!
 @RunWith(AndroidJUnit4::class)
-class LocalTodoRepositoryTest : KoinTest {
+class TodoRepositoryTest : KoinTest {
 
     private val localTodoRepository: TodoRepository by inject()
     private val todoAppDatabase: TodoAppDatabase by inject()
@@ -33,7 +33,6 @@ class LocalTodoRepositoryTest : KoinTest {
         todoAppDatabase.close()
         stopKoin()
     }
-    
 
     @Test
     fun getTodosCountTest() = runBlocking {
@@ -107,6 +106,35 @@ class LocalTodoRepositoryTest : KoinTest {
         // then : 남아있는 투두는 0개가 된다
         val todosCount = localTodoRepository.getTodosCount()
         assertThat(todosCount, equalTo(0))
+    }
+
+    @Test
+    fun putTodoModelBy_isCompleted() = runBlocking {
+        // given
+        localTodoRepository.postTodo(dummyIsNotCompletedTodo)
+        val todo = localTodoRepository.getTodosBy(false).first()
+
+        // when
+        localTodoRepository.putTodoModelBy(true, todo.id)
+
+        // then
+        val todosCount = localTodoRepository.getTodosCountBy(false)
+        assertThat(todosCount, equalTo(0))
+    }
+
+    @Test
+    fun putTodoModelBy_title_and_description() = runBlocking {
+        // given
+        localTodoRepository.postTodo(dummyIsNotCompletedTodo)
+        val todo = localTodoRepository.getTodosBy(false).first()
+
+        // when
+        localTodoRepository.putTodoModelBy(title = "test", description = "test", id = todo.id)
+
+        // then
+        val updateTodo = localTodoRepository.getTodosBy(false).first()
+        assertThat(updateTodo.title, equalTo("test"))
+        assertThat(updateTodo.description, equalTo("test"))
     }
 
 }

@@ -38,6 +38,8 @@ android {
 
 dependencies {
     implementation(project(":util"))
+    implementation(project(":entity"))
+    implementation(project(":repository"))
     implementation(Dependency.Kotlin.stblib)
     implementation(Dependency.Coroutine.core)
 
